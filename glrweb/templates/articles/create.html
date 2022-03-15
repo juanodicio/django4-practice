@@ -1,0 +1,17 @@
+<html>
+<body>
+    <h1>Agregar artículo</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        
+        <p><input type="submit" value="Guardar" /></p>
+    </form>
+
+   
+
+</body>
+</html>
