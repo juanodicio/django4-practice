@@ -1,0 +1,16 @@
+<html>
+<body>
+    <h1>Lista de artículos
+        <a href="{% url 'article_create' %}">(Agregar)</a>
+    </h1>
+
+    <ul>
+    {% for article in articles_list %}
+        <li>
+            <a href="{% url 'article_detail' article.id %}">
+                {{ article.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>
