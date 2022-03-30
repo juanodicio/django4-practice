@@ -1,0 +1,55 @@
+{% load static %}
+<html>
+<head>
+    <title>{% block title %}Mi web{% endblock title %}</title>
+
+    <link rel="stylesheet" href="{% static 'glrweb/template.css' %}" >
+
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Mi web</h1>
+    </header>
+
+    <main>
+
+        {% block main %}
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        {% endblock main %}
+    </main>
+
+    <aside>
+        <h2>Categorias</h2>
+
+        <ul>
+            {% for categ in site_categories %}
+            <li>{{categ}}</li>
+            {% endfor %}
+        </ul>
+    </aside>
+
+    <footer>
+        Mi web - {% include 'partial/footer.html' %} 
+    </footer>
+
+</div>
+
+</body>
+</html>

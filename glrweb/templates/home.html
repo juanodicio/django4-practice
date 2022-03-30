@@ -1,14 +1,15 @@
-<html>
-<body>
-    <h1>Home {{ titulo }}</h1>
+{% extends 'base.html' %}
 
-    <ul>
+{% block title %}Mi super web 4.0{% endblock title %}
+
+{% block main %}
+
+<h3>{{titulo}} {{titulo|length }}</h3>
+
+<ul>
     {% for article in articles %}
-        <li>
-            <a href="{% url 'article_view' article.id %}">
-                {{ article.title }}</a></li>
+    <li>{{ article.title }}</li>
     {% endfor %}
-    </ul>
+</ul>
 
-</body>
-</html>
+{% endblock main %}
