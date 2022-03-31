@@ -6,7 +6,7 @@ from . import forms
 # Create your views here.
 
 def home_view(request):
-    articles = models.Article.objects.all()
+    articles = models.Article.objects.all().prefetch_related('category')
 
     datos = dict(
         titulo="hola",

@@ -8,6 +8,9 @@ class Category(models.Model):
         max_length=100
     )
 
+    def __str__(self):
+        return self.name
+
 
 class Article(models.Model):
     title = models.CharField(

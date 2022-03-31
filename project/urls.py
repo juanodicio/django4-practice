@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('console/', admin.site.urls),
+    path('__debug__/', include('debug_toolbar.urls')),
     path("", include('glrweb.urls')),
 ]
